@@ -1,0 +1,30 @@
+body {
+	text-align: center;
+}
+
+@font-face {
+   font-family: 'Edda Caps';
+   src: font-url('eddacaps.ttf');
+}
+
+#landing {
+	font-family: "Edda Caps";
+	font-size: 2.05em;
+	color: #2D51BC;
+	letter-spacing: 0.2em;
+
+	
+}
+
+#handprint-container {
+	width: 92%;
+	border-radius: 50%;
+}
+
+#handprint {
+	border-radius: 40%;
+	/*position: absolute;
+	z-index: 0;*/
+
+}
+	
