@@ -1,0 +1,1 @@
+# spec/models/genre_spec.rb

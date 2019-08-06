@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_01_182642) do
+ActiveRecord::Schema.define(version: 2019_08_06_152830) do
 
   create_table "albums", force: :cascade do |t|
     t.string "title"
@@ -42,17 +42,17 @@ ActiveRecord::Schema.define(version: 2019_08_01_182642) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.string "email"
+  create_table "songs_users", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "song_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users_songs", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "song_id"
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
