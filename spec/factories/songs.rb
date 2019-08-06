@@ -1,18 +1,13 @@
 # spec/factories/songs.rb
 
+require 'faker'
+
 FactoryBot.define do 
-  factory :song do 
-  	title = "Ripple"
-	user_id = 1
-	author_id = 1
-	genre_id = 1
+  factory :song do |f|
+  	f.title { Faker::Music::GratefulDead.song }
+	f.user_id { Faker::Number.digit}
+	f.author_id { Faker::Number.digit}
+	f.genre_id { Faker::Number.digit}
   end
 end
 
-# FactoryBot.define do 
-#   factory :user do 
-#   	username "Joe"
-#     email "joe@gmail.com"
-#     password "blah"
-#   end
-# end
