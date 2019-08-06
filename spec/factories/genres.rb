@@ -3,7 +3,7 @@
 require 'faker'
 
 FactoryBot.define do 
-  factory :album do |f|
+  factory :genre do |f|
   	f.name { Faker::Music.genre }
   end
 end
