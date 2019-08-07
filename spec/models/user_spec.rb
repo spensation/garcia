@@ -14,9 +14,9 @@ RSpec.describe User, type: :model do
     it { should validate_uniqueness_of :email }
   end
 
-  context 'associations' do
-    it { should have_and_belong_to_many(:songs)}
-  end
+  # context 'associations' do
+  #   it { should have_and_belong_to_many(:songs)}
+  # end
 
 end
 

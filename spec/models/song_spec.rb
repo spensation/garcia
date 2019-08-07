@@ -19,7 +19,6 @@ RSpec.describe Song, :type => :model do
     it { should belong_to(:author) } 
     it { should belong_to(:genre) } 
     it { should belong_to(:album) } 
-    it {should have_and_belong_to_many(:users)}
   end
 
 end

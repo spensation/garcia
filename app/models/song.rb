@@ -4,5 +4,20 @@ class Song < ApplicationRecord
 	belongs_to :author
 	belongs_to :album
 	belongs_to :genre
-	has_and_belongs_to_many :users
+
+	def author_name=(name)
+		self.author = Author.find_or_create_by(name: name)
+	end
+
+	def author_name
+		self.author ? self.author.name : nil
+	end
+
+	def album_name=(title)
+		self.album = Album.find_or_create_by(title: title)
+	end
+
+	def album_name
+		self.album ? self.album.title : nil
+	end
 end
