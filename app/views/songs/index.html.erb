@@ -2,7 +2,6 @@
 <h1>All The Songs!</h1>
 
 
-
 <div>
 <% @songs.each do |song| %>
 	<p><%= link_to song.title, song_path(song) %></p>
