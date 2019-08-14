@@ -1,9 +1,24 @@
 <!-- views/songs/index.html -->
-<h1>All The Songs!</h1>
-
-
 <div>
-<% @songs.each do |song| %>
-	<p><%= link_to song.title, song_path(song) %></p>
-<% end %>
+	<% if logged_in? %>
+	<h4> Welcome, <%=current_user.username%></h4>
+	
+	<h1>All The Songs!</h1>
+	
+
+	<div>
+		<% @songs.each do |song| %>
+			<p><%= link_to song.title, song_path(song) %></p>
+		<% end %>
+	</div>
+	<% else %>
+		<h1>All The Songs!</h1>
+	
+
+		<div>
+			<% @songs.each do |song| %>
+				<p><%= link_to song.title, song_path(song) %></p>
+			<% end %>
+		</div>
+	<% end %>
 </div>

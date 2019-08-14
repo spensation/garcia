@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+	include ApplicationHelper
 	def index
 		@songs = Song.all
 	end
