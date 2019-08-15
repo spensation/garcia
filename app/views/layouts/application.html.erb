@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <div class="navbar">
+      <a class="navlink"> <%= link_to "Home", songs_path %></a>
+      <a class="navlink"> <%= link_to "Login", login_path %></a>
+      <a class="navlink"> <%= link_to "Logout", logout_path %></a>
+    </div>
     <%= yield %>
   </body>
 </html>
