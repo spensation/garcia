@@ -10,11 +10,7 @@
 </div>
 
 <div>
-	<button onclick="addSongToUserSongs()">Add Song to My List</button>
+	<%= button_to "Add song to my list", user_songs_path(current_user)%>
 </div>
+	
 
-<script>
-	function addSongToUserSongs() {
-		alert("Hello")
-	}
-</script>
