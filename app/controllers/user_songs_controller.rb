@@ -1,15 +1,15 @@
 class UserSongsController < ApplicationController
 	def index
-		@usersongs = Usersongs.find_by(params[:user_id])
+		@user_songs = Usersong.find_by(params[:user_id])
 	end
+
 
 	def create
-		@usersong = UserSong.new(usersong_params)
-	end
+		@user = current_user
+		raise params.inspect
 
-
-	private
-	def usersong_params
-		params.require(:usersong).permit(:user_id, :song_id)
+		@user_song = UserSong.new
+		
 	end
+	
 end
