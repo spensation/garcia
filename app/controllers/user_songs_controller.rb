@@ -8,7 +8,9 @@ class UserSongsController < ApplicationController
 	end
 
 	def create
+		raise params.inspect
 		@user = User.find_by(params[:id])
+		@song = Song.find_by(params[:id])
 
 		# raise params.inspect
 

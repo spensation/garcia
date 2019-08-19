@@ -10,7 +10,10 @@
 </div>
 
 <div>
-	<%= button_to "Add song to my list", user_songs_path(current_user)%>
+	<%= form_for(@user_song) do |f| %>
+		<%= f.hidden_field :song_id => @song.id %>
+		<%= f.submit "Add song to my list", :class => "submit" %>
+		<% end %> 
 </div>
 	
 
