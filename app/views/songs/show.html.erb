@@ -11,7 +11,7 @@
 
 <div>
 	<%= form_for(@user_song) do |f| %>
-		<%= f.hidden_field :song_id => @song.id %>
+		<%= f.hidden_field :user_id, :value => @user.id %>
 		<%= f.submit "Add song to my list", :class => "submit" %>
 		<% end %> 
 </div>

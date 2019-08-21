@@ -5,6 +5,7 @@ class SongsController < ApplicationController
 	end
 
 	def show
+		@user = current_user
 		@song = Song.find(params[:id])
 		@user_song = UserSong.new
 	end

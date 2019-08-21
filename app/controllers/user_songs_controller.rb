@@ -8,13 +8,15 @@ class UserSongsController < ApplicationController
 	end
 
 	def create
-		raise params.inspect
+		# raise params.inspect
 		@user = User.find_by(params[:id])
 		@song = Song.find_by(params[:id])
 
 		# raise params.inspect
 
 		@user_song = UserSong.new(user_song_params)
+
+		redirect_to user_song_path(@user)
 		
 	end
 	
