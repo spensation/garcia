@@ -19,6 +19,12 @@ class UserSongsController < ApplicationController
 		redirect_to user_song_path(@user)
 		
 	end
+
+	def show
+		@user = current_user.username
+		@user_songs = UserSong.all
+		@user_song = UserSong.find(params[:id])
+	end
 	
 	private
     def user_song_params
