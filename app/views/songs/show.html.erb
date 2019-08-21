@@ -10,7 +10,7 @@
 </div>
 
 <div>
-	<%= form_for(@user_song) do |f| %>
+	<%= form_for(@user_songs) do |f| %>
 		<%= f.hidden_field :user_id, :value => @user.id %>
 		<%= f.submit "Add song to my list", :class => "submit" %>
 		<% end %> 

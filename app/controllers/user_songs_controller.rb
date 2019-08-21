@@ -1,6 +1,6 @@
 class UserSongsController < ApplicationController
 	def index
-		@user_songs = Usersong.find_by(params[:user_id])
+		@user_songs = UserSong.includes(:user => current_user)
 	end
 
 	def new
@@ -22,7 +22,7 @@ class UserSongsController < ApplicationController
 
 	def show
 		@user = current_user.username
-		@user_songs = UserSong.all
+		
 		@user_song = UserSong.find(params[:id])
 	end
 	
