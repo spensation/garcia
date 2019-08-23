@@ -1,6 +1,6 @@
 class UserSongsController < ApplicationController
 	def index
-		@user_songs = UserSong.includes(:user => current_user)
+		@user_song = UserSong.find_by_id(2)
 	end
 
 	def new
