@@ -1,6 +1,6 @@
 class UserSongsController < ApplicationController
 	def index
-		@user_song = UserSong.find_by_id(2)
+		@user_song = UserSong.find_by_id(params[:id])
 	end
 
 	def new
